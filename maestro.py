@@ -7,8 +7,11 @@ from datetime import datetime
 import json
 from tavily import TavilyClient
 
+
 # Set up the Anthropic API client
-client = Anthropic(api_key="YOUR KEY")
+
+apikey = os.environ.get('APIKEY')
+client = Anthropic(api_key=apikey)
 
 # Available Claude models:
 # Claude 3 Opus     claude-3-opus-20240229
